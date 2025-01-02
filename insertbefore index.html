@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>insertbefore</title>
+    </head>
+    <body>
+         <h1>Family</h1>
+         <ul id="myfamilys">
+            <li>Bhavesh</li>
+            <li>Damini</li>
+            </ul>
+            <button onclick="addNewFamily('Mishika')">Add New Member</button>
+            <script>
+                  function addNewFamily(familyname){
+
+                 // alert('ok '+familyname);
+                  var fn = prompt('enter family name');
+                  console.log(fn);
+                l = document.createElement('li');
+                l.innerHTML = fn;
+                //var tn = document.createTextNode(fn);
+
+                //console.log(tn);
+               // l.append(tn);
+
+                console.log(l);
+                   var x = document.getElementById("myfamilys");
+                   console.log(x.childNodes);
+                   console.log(x.childNodes[1]);
+
+
+                   x.insertBefore(l,x.childNodes[l])
+
+                  }   
+
+                var l;
+                </script>
+
+    </body>
+</html>
